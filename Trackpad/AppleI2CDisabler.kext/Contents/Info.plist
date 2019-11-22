@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Disabler</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Kernel Extension Disabler 1.0.1, Copyright © 2008 by Kabyl</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.osrom.kext.Disabler</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Kernel Extension Disabler</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.1</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AppleHPMLPSSDisabler</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>net.osrom.kext.Disabler</string>
+			<key>IOClass</key>
+			<string>Disabler</string>
+			<key>IOProviderClass</key>
+			<string>AppleIntelLpssI2CDevice</string>
+		</dict>
+		<key>AppleIntelLpssI2CControllerDisabler</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>net.osrom.kext.Disabler</string>
+			<key>IOClass</key>
+			<string>Disabler</string>
+			<key>IOKitDebug</key>
+			<integer>0</integer>
+			<key>IOProbeScore</key>
+			<integer>500</integer>
+			<key>IOProviderClass</key>
+			<string>AppleIntelLpssI2C</string>
+			<key>OSBundleEnableKextLogging</key>
+			<integer>6</integer>
+		</dict>
+		<key>AppleIntelLpssI2CDisabler</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>net.osrom.kext.Disabler</string>
+			<key>IOClass</key>
+			<string>Disabler</string>
+			<key>IOKitDebug</key>
+			<integer>0</integer>
+			<key>IOPCIMatch</key>
+			<string>0x80608086&amp;0xc278ffff</string>
+			<key>IOProbeScore</key>
+			<integer>500</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.kpi.iokit</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>
